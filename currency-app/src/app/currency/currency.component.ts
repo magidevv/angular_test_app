@@ -10,8 +10,8 @@ import { HttpClient } from '@angular/common/http';
   `,
 })
 export class CurrencyComponent implements OnInit {
-  usdExchangeRate: number; // Змінна для збереження курсу долара до гривні
-  eurExchangeRate: number; // Змінна для збереження курсу євро до гривні
+  usdExchangeRate!: number; // Змінна для збереження курсу долара до гривні
+  eurExchangeRate!: number; // Змінна для збереження курсу євро до гривні
 
   constructor(private http: HttpClient) {}
 
@@ -20,7 +20,7 @@ export class CurrencyComponent implements OnInit {
   }
 
   getExchangeRates() {
-    const url = '';
+    const url = 'https://open.er-api.com/v6/latest/UAH';
 
     fetch(url)
       .then((response) => response.json())
