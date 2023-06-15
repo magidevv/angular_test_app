@@ -1,0 +1,25 @@
+.currency-container {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.currency-container h2 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.currency-container p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.currency {
+  font-weight: bold;
+  font-size: large;
+}
