@@ -36,25 +36,32 @@ export class CurrencyConverterComponent implements OnInit {
 
   // Перерахунок значення amount2 на основі amount1
   convertCurrencies1() {
-    const rate1 = this.conversionRates[this.currency1];
-    const rate2 = this.conversionRates[this.currency2];
+    if (this.amount1 >= 0 && this.amount2 >= 0) {
+      const rate1 = this.conversionRates[this.currency1];
+      const rate2 = this.conversionRates[this.currency2];
 
-    if (rate1 && rate2) {
-      this.amount2 = Number(((this.amount1 / rate1) * rate2).toFixed(2));
+      if (rate1 && rate2) {
+        this.amount2 = Number(((this.amount1 / rate1) * rate2).toFixed(2));
+      } else {
+        console.log('Invalid conversion rates');
+      }
     } else {
-      console.log('Invalid conversion rates');
+      this.amount2 = 0;
     }
   }
 
   // Перерахунок значення amount1 на основі amount2
   convertCurrencies2() {
-    const rate1 = this.conversionRates[this.currency1];
-    const rate2 = this.conversionRates[this.currency2];
-
-    if (rate1 && rate2) {
-      this.amount1 = Number(((this.amount2 / rate2) * rate1).toFixed(2));
+    if (this.amount1 >= 0 && this.amount2 >= 0) {
+      const rate1 = this.conversionRates[this.currency1];
+      const rate2 = this.conversionRates[this.currency2];
+      if (rate1 && rate2) {
+        this.amount1 = Number(((this.amount2 / rate2) * rate1).toFixed(2));
+      } else {
+        console.log('Invalid conversion rates');
+      }
     } else {
-      console.log('Invalid conversion rates');
+      this.amount1 = 0;
     }
   }
 
