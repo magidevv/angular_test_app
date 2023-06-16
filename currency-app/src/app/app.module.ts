@@ -11,7 +11,7 @@ import { CurrencyConverterComponent } from './currency-converter/currency-conver
 @NgModule({
   declarations: [AppComponent, CurrencyComponent, CurrencyConverterComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
-  providers: [],
+  providers: [HttpClientModule],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

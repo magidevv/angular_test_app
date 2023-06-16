@@ -26,7 +26,7 @@ export class CurrencyComponent implements OnInit {
         this.eurExchangeRate = (1 / data.rates.EUR).toFixed(2); // Зберігаємо курс євро до гривні
       })
       .catch((error) => {
-        console.log('Помилка при отриманні курсу валют:', error);
+        console.log('Invalid conversion rates', error);
       });
   }
 }
