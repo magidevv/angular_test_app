@@ -1,22 +1,24 @@
 <div class="position">
   <div class="currency-converter-container">
     <h1>Currency Converter</h1>
-    <div>
-      <input type="number" [(ngModel)]="amount1" (ngModelChange)="convertCurrencies1()" class="converter-input" />
-      <select [(ngModel)]="currency1" (ngModelChange)="convertCurrencies1()" class="converter-select">
-        <option value="UAH">UAH</option>
-        <option value="USD">USD</option>
-        <option value="EUR">EUR</option>
-      </select>
+    <div class="currencies">
+      <div>
+        <input type="number" [(ngModel)]="amount1" (ngModelChange)="convertCurrencies1()" class="converter-input" />
+        <select [(ngModel)]="currency1" (ngModelChange)="convertCurrencies1()" class="converter-select">
+          <option value="UAH">UAH</option>
+          <option value="USD">USD</option>
+          <option value="EUR">EUR</option>
+        </select>
+      </div>
+      <div>
+        <input type="number" [(ngModel)]="amount2" (ngModelChange)="convertCurrencies2()" class="converter-input" />
+        <select [(ngModel)]="currency2" (ngModelChange)="convertCurrencies2()" class="converter-select">
+          <option value="UAH">UAH</option>
+          <option value="USD">USD</option>
+          <option value="EUR">EUR</option>
+        </select>
+      </div>
+      <button (click)="swapCurrencies()" class="converter-button">SWAP</button>
     </div>
-    <div>
-      <input type="number" [(ngModel)]="amount2" (ngModelChange)="convertCurrencies2()" class="converter-input" />
-      <select [(ngModel)]="currency2" (ngModelChange)="convertCurrencies2()" class="converter-select">
-        <option value="UAH">UAH</option>
-        <option value="USD">USD</option>
-        <option value="EUR">EUR</option>
-      </select>
-    </div>
-    <button (click)="swapCurrencies()" class="converter-button">SWAP</button>
   </div>
 </div>

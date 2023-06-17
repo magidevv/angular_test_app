@@ -1,17 +1,30 @@
 .position {
   display: flex;
+  padding: 10px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: inherit;
   height: 70vh;
 }
 
 .currency-converter-container {
   position: fixed;
+  justify-content: center;
+  margin: 10px;
   padding: 20px;
   background-color: #f1f1f1;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.currencies {
+  display: flex;
+  width: inherit;
+  padding: 10px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 h1 {
@@ -44,4 +57,17 @@ h1 {
 
 .converter-button:hover {
   background-color: #1462b0;
+}
+
+@media screen and (max-width: 900px) {
+  .currency-converter-container {
+    display: flex;
+    position: relative;
+    margin: 10px;
+    padding: 20px 0px 20px 0px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
 }
